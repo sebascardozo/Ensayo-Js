@@ -13,8 +13,8 @@ class paciente {
 }
 let pacientes = [];
 function crearPaciente() {
-    const nombre = prompt("Ingresa el nombre");
-    const dni = prompt("Ingresa el dni");
+    const nombre = prompt("Ingresa el Nombre y Apellido");
+    const dni = prompt("Ingresa el DNI");
     const edad = prompt("Ingresa la edad");
     const primerDosis = prompt("Ingresa Nombre Primer Dosis");
     const  segundaDosis= prompt("Ingresa Nombre Segunda Dosis");
@@ -23,13 +23,13 @@ function crearPaciente() {
     return new paciente(nombre, dni, edad, primerDosis, segundaDosis, terceraDosis);
 }
 
-let continuar = confirm("Desea cargar mas pacientes?");
+let continuar = confirm("Desea cargar más pacientes?");
 while (continuar) {
     let paciente = crearPaciente();
     console.log("Datos del paciente: ", paciente.imprimirPaciente());
     pacientes.push(paciente);
 
-    continuar = confirm("Desea cargar mas pacientes?");
+    continuar = confirm("Desea cargar más pacientes?");
 }
 
 console.table(pacientes);
